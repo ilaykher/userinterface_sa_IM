@@ -33,8 +33,6 @@ Partial Class ProductDetails
         Label4 = New Label()
         Label5 = New Label()
         Label6 = New Label()
-        lblSold = New Label()
-        lblLocation = New Label()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         SuspendLayout()
@@ -146,33 +144,11 @@ Partial Class ProductDetails
         ' 
         Label6.AutoSize = True
         Label6.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(23, 423)
+        Label6.Location = New Point(23, 353)
         Label6.Name = "Label6"
         Label6.Size = New Size(144, 20)
         Label6.TabIndex = 10
         Label6.Text = "Date Listed For Sale:"
-        ' 
-        ' lblSold
-        ' 
-        lblSold.AutoSize = True
-        lblSold.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblSold.Location = New Point(23, 354)
-        lblSold.Name = "lblSold"
-        lblSold.Size = New Size(42, 20)
-        lblSold.TabIndex = 11
-        lblSold.Text = "Sold:"
-        lblSold.TextAlign = ContentAlignment.TopCenter
-        ' 
-        ' lblLocation
-        ' 
-        lblLocation.AutoSize = True
-        lblLocation.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblLocation.Location = New Point(23, 387)
-        lblLocation.Name = "lblLocation"
-        lblLocation.Size = New Size(69, 20)
-        lblLocation.TabIndex = 12
-        lblLocation.Text = "Location:"
-        lblLocation.TextAlign = ContentAlignment.TopCenter
         ' 
         ' ProductDetails
         ' 
@@ -180,8 +156,6 @@ Partial Class ProductDetails
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.OldLace
         ClientSize = New Size(969, 603)
-        Controls.Add(lblLocation)
-        Controls.Add(lblSold)
         Controls.Add(Label6)
         Controls.Add(Label5)
         Controls.Add(Label4)
@@ -212,6 +186,4 @@ Partial Class ProductDetails
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents lblSold As Label
-    Friend WithEvents lblLocation As Label
 End Class

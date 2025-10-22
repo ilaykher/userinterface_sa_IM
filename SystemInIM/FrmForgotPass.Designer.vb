@@ -262,7 +262,7 @@ Partial Class FrmForgotPass
         ' 
         ' FrmForgotPass
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.OldLace
         ClientSize = New Size(829, 544)
@@ -284,7 +284,10 @@ Partial Class FrmForgotPass
         Controls.Add(BtnFindUsernameDB)
         Controls.Add(TxtForgotUsername)
         Controls.Add(lblForgotUsername)
+        FormBorderStyle = FormBorderStyle.FixedSingle
         Margin = New Padding(2, 3, 2, 3)
+        MaximizeBox = False
+        MinimizeBox = False
         Name = "FrmForgotPass"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Device Market System"

@@ -6,18 +6,14 @@ Public Class ViewCart
     Dim totalQuantity As Integer = 0
     Dim productname As String
     Private allChecked As Boolean = False
-
-    ' NumericUpDown overlay used for polished quantity editing
-    Private nudQuantity As NumericUpDown
-
     Private Sub ViewCart_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' --------------------Populate combobox :D
 
+        ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList
+        ComboBox1.Items.Add("  Search By Name:")
+        ComboBox1.Items.Add("  Search By Category")
+
         ComboBox1.SelectedIndex = 0
-
-        ' wire Enter on search box to perform search
-        AddHandler TextBox1.KeyDown, AddressOf TextBox1_KeyDown
-
         LoadCart(Globals.LoggedInUserId)
 
         'call checkbox event
@@ -25,19 +21,11 @@ Public Class ViewCart
 
     End Sub
 
-    ' LoadCart now supports optional search
-    Public Sub LoadCart(userid As Integer, Optional searchTerm As String = "", Optional searchByCategory As Boolean = False)
-
-        ' reset totals
-        priceOfselectedItem = 0
-        totalPrice = 0
-        totalQuantity = 0
-        productname = ""
-        Label3.Text = "₱0.00"
-        Label2.Text = "Total: (0 item)"
-        Button3.Text = If(allChecked, "Uncheck All", "Check All")
+    Public Sub LoadCart(userid As Integer)
 
         '===================CART DESIGN========================
+
+
         With DataGridView1
             ' checkbox column
             If Not DataGridView1.Columns.Contains("chkSelect") Then
@@ -77,38 +65,14 @@ Public Class ViewCart
 
         '=========================================
 
+
         Dim connectionString As String = "server=localhost;user=root;password=;database=information_management"
 
-        Using con As New MySqlConnection(connectionString)
-            con.Open()
+        Dim con As New MySqlConnection(connectionString)
+        con.Open()
 
-            ' Build query depending on search inputs
-            Dim sql As String
-            Dim cmd As MySqlCommand
-
-            searchTerm = If(searchTerm, "").Trim()
-
-            If String.IsNullOrWhiteSpace(searchTerm) Then
-                sql = "SELECT product_name, price, quantity FROM cart WHERE user_id = @userid"
-                cmd = New MySqlCommand(sql, con)
-                cmd.Parameters.AddWithValue("@userid", userid)
-            Else
-                If searchByCategory Then
-                    ' join with products to filter by category
-                    sql = "SELECT c.product_name, c.price, c.quantity " &
-                          "FROM cart c INNER JOIN products p ON c.product_name = p.product_name " &
-                          "WHERE c.user_id = @userid AND p.category LIKE @search"
-                    cmd = New MySqlCommand(sql, con)
-                    cmd.Parameters.AddWithValue("@userid", userid)
-                    cmd.Parameters.AddWithValue("@search", "%" & searchTerm & "%")
-                Else
-                    ' search by product name in cart
-                    sql = "SELECT product_name, price, quantity FROM cart WHERE user_id = @userid AND product_name LIKE @search"
-                    cmd = New MySqlCommand(sql, con)
-                    cmd.Parameters.AddWithValue("@userid", userid)
-                    cmd.Parameters.AddWithValue("@search", "%" & searchTerm & "%")
-                End If
-            End If
+        Using cmd As New MySqlCommand("SELECT product_name, price, quantity FROM cart WHERE user_id = @userid", con)
+            cmd.Parameters.AddWithValue("@userid", userid)
 
             Dim adapter As New MySqlDataAdapter(cmd)
             Dim dt As New DataTable()
@@ -127,27 +91,6 @@ Public Class ViewCart
                 col.SortMode = DataGridViewColumnSortMode.NotSortable
             End If
         Next
-
-        ' ensure +/- button columns exist (added after datasource so they don't disappear)
-        If Not DataGridView1.Columns.Contains("btnAdd") Then
-            Dim btnAdd As New DataGridViewButtonColumn()
-            btnAdd.HeaderText = "+"
-            btnAdd.Name = "btnAdd"
-            btnAdd.Text = "+"
-            btnAdd.UseColumnTextForButtonValue = True
-            btnAdd.Width = 40
-            DataGridView1.Columns.Add(btnAdd)
-        End If
-
-        If Not DataGridView1.Columns.Contains("btnSubtract") Then
-            Dim btnSubtract As New DataGridViewButtonColumn()
-            btnSubtract.HeaderText = "-"
-            btnSubtract.Name = "btnSubtract"
-            btnSubtract.Text = "-"
-            btnSubtract.UseColumnTextForButtonValue = True
-            btnSubtract.Width = 40
-            DataGridView1.Columns.Add(btnSubtract)
-        End If
 
     End Sub
 
@@ -207,6 +150,9 @@ Public Class ViewCart
     End Sub
 
 
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
 
     'checkout button
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -313,88 +259,5 @@ Public Class ViewCart
         End If
 
         con.Close()
-    End Sub
-
-    ' Handle button clicks for + and -
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-        If e.RowIndex < 0 Then Return
-
-        Dim row As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
-        Dim productName As String = row.Cells("product_name").Value.ToString()
-        Dim currentQty As Integer = Convert.ToInt32(row.Cells("quantity").Value)
-
-        If DataGridView1.Columns(e.ColumnIndex).Name = "btnAdd" Then
-            ' Check stock from products table
-            Dim stockQty As Integer = GetProductStock(productName)
-            If currentQty < stockQty Then
-                UpdateCartQuantity(productName, currentQty + 1)
-                LoadCart(Globals.LoggedInUserId)
-            Else
-                MessageBox.Show("Cannot add more. Stock limit reached.", "Stock Limit", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            End If
-        ElseIf DataGridView1.Columns(e.ColumnIndex).Name = "btnSubtract" Then
-            If currentQty > 1 Then
-                UpdateCartQuantity(productName, currentQty - 1)
-                LoadCart(Globals.LoggedInUserId)
-            Else
-                MessageBox.Show("Quantity cannot be less than 1.", "Minimum Quantity", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            End If
-        End If
-    End Sub
-
-    ' Helper to get product stock from products table
-    Private Function GetProductStock(productName As String) As Integer
-        Dim stockQty As Integer = 0
-        Dim con As New MySqlConnection("server=localhost;user=root;password=;database=information_management")
-        con.Open()
-        Using cmd As New MySqlCommand("SELECT stock FROM products WHERE product_name = @productName", con)
-            cmd.Parameters.AddWithValue("@productName", productName)
-            Dim result = cmd.ExecuteScalar()
-            If result IsNot Nothing Then
-                stockQty = Convert.ToInt32(result)
-            End If
-        End Using
-        con.Close()
-        Return stockQty
-    End Function
-
-    ' Helper to update cart quantity
-    Private Sub UpdateCartQuantity(productName As String, newQty As Integer)
-        Dim con As New MySqlConnection("server=localhost;user=root;password=;database=information_management")
-        con.Open()
-        Using cmd As New MySqlCommand("UPDATE cart SET quantity = @qty WHERE user_id = @userid AND product_name = @productName", con)
-            cmd.Parameters.AddWithValue("@qty", newQty)
-            cmd.Parameters.AddWithValue("@userid", Globals.LoggedInUserId)
-            cmd.Parameters.AddWithValue("@productName", productName)
-            cmd.ExecuteNonQuery()
-        End Using
-        con.Close()
-    End Sub
-
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-
-    End Sub
-
-    ' trigger search on Enter
-    Private Sub TextBox1_KeyDown(sender As Object, e As KeyEventArgs)
-        If e.KeyCode = Keys.Enter Then
-            e.SuppressKeyPress = True
-            PerformSearch()
-        End If
-    End Sub
-
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
-
-    End Sub
-
-    ' Apply / search button - assumed to be Button4
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        PerformSearch()
-    End Sub
-
-    Private Sub PerformSearch()
-        Dim term As String = If(TextBox1.Text, "").Trim()
-        Dim searchByCategory As Boolean = (ComboBox1.SelectedIndex = 1) ' index 1 == category
-        LoadCart(Globals.LoggedInUserId, term, searchByCategory)
     End Sub
 End Class

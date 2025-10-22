@@ -53,9 +53,9 @@ Public Class modeOfPayment
             Label4.Text = $"Total Price: ₱{totalPrice1:N2}"
 
             Label3.Text = displayText.ToString()
-        ElseIf Not String.IsNullOrEmpty(ProductName2) Then
-            ' Single product (if opened from ProductDetails) - use ProductName2 property
-            Label3.Text = $"Product: {ProductName2}{Environment.NewLine}" &
+        ElseIf Not String.IsNullOrEmpty(ProductName) Then
+            ' Single product (if opened from ProductDetails)
+            Label3.Text = $"Product: {ProductName}{Environment.NewLine}" &
                       $"Price: ₱{ProductPrice:N2}{Environment.NewLine}" &
                       $"Quantity: {ProductQuantity}"
             Label4.Text = $"Total Price: ₱{ProductPrice:N2}"
@@ -153,26 +153,6 @@ Public Class modeOfPayment
                         productForm.Close()
                     End If
 
-                    ' --- refresh UI on main product list ---
-                    Dim uiForm As UserInetrfaceNew = Application.OpenForms().OfType(Of UserInetrfaceNew)().FirstOrDefault()
-                    If uiForm IsNot Nothing Then
-                        If uiForm.InvokeRequired Then
-                            uiForm.Invoke(Sub() uiForm.RefreshProducts())
-                        Else
-                            uiForm.RefreshProducts()
-                        End If
-                    End If
-
-                    ' --- refresh ViewCart if open (cart checkout removed items) ---
-                    Dim cartForm As ViewCart = Application.OpenForms().OfType(Of ViewCart)().FirstOrDefault()
-                    If cartForm IsNot Nothing Then
-                        If cartForm.InvokeRequired Then
-                            cartForm.Invoke(Sub() cartForm.LoadCart(Globals.LoggedInUserId))
-                        Else
-                            cartForm.LoadCart(Globals.LoggedInUserId)
-                        End If
-                    End If
-
                     Me.Close()
 
                 Else
@@ -226,26 +206,6 @@ Public Class modeOfPayment
 
                     MessageBox.Show("Purchase Pending! Thank you for your purchase!",
                                 "Purchase Pending", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-                    ' --- refresh UI on main product list ---
-                    Dim uiForm As UserInetrfaceNew = Application.OpenForms().OfType(Of UserInetrfaceNew)().FirstOrDefault()
-                    If uiForm IsNot Nothing Then
-                        If uiForm.InvokeRequired Then
-                            uiForm.Invoke(Sub() uiForm.RefreshProducts())
-                        Else
-                            uiForm.RefreshProducts()
-                        End If
-                    End If
-
-                    ' --- refresh ViewCart if open (cart checkout removed items) ---
-                    Dim cartForm As ViewCart = Application.OpenForms().OfType(Of ViewCart)().FirstOrDefault()
-                    If cartForm IsNot Nothing Then
-                        If cartForm.InvokeRequired Then
-                            cartForm.Invoke(Sub() cartForm.LoadCart(Globals.LoggedInUserId))
-                        Else
-                            cartForm.LoadCart(Globals.LoggedInUserId)
-                        End If
-                    End If
 
                     Me.Close()
 

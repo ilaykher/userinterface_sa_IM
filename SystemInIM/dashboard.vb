@@ -18,4 +18,7 @@
         p.Region = New Region(gp)
     End Sub
 
+    Private Sub circleLeftBorder_Paint(sender As Object, e As PaintEventArgs) Handles circleLeftBorder.Paint
+
+    End Sub
 End Class

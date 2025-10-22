@@ -45,110 +45,110 @@ Partial Class FrmUserCreation
         ' txtCreateUsername
         ' 
         txtCreateUsername.BackColor = Color.LightGray
-        txtCreateUsername.Font = New Font("Segoe UI", 10.0F)
-        txtCreateUsername.Location = New Point(214, 105)
-        txtCreateUsername.Margin = New Padding(2, 3, 2, 3)
+        txtCreateUsername.Font = New Font("Segoe UI", 10F)
+        txtCreateUsername.Location = New Point(187, 79)
+        txtCreateUsername.Margin = New Padding(2, 2, 2, 2)
         txtCreateUsername.Name = "txtCreateUsername"
         txtCreateUsername.PlaceholderText = "(e.g. user)"
-        txtCreateUsername.Size = New Size(266, 30)
+        txtCreateUsername.Size = New Size(233, 25)
         txtCreateUsername.TabIndex = 0
         ' 
         ' txtCreatePass
         ' 
         txtCreatePass.BackColor = Color.LightGray
-        txtCreatePass.Font = New Font("Segoe UI", 10.0F)
-        txtCreatePass.Location = New Point(214, 194)
-        txtCreatePass.Margin = New Padding(2, 3, 2, 3)
+        txtCreatePass.Font = New Font("Segoe UI", 10F)
+        txtCreatePass.Location = New Point(187, 146)
+        txtCreatePass.Margin = New Padding(2, 2, 2, 2)
         txtCreatePass.Name = "txtCreatePass"
         txtCreatePass.PlaceholderText = "(Type in your password)"
-        txtCreatePass.Size = New Size(266, 30)
+        txtCreatePass.Size = New Size(233, 25)
         txtCreatePass.TabIndex = 1
         ' 
         ' txtSecurityAnswer
         ' 
         txtSecurityAnswer.BackColor = Color.LightGray
-        txtSecurityAnswer.Font = New Font("Segoe UI", 10.0F)
-        txtSecurityAnswer.Location = New Point(214, 355)
-        txtSecurityAnswer.Margin = New Padding(2, 3, 2, 3)
+        txtSecurityAnswer.Font = New Font("Segoe UI", 10F)
+        txtSecurityAnswer.Location = New Point(187, 266)
+        txtSecurityAnswer.Margin = New Padding(2, 2, 2, 2)
         txtSecurityAnswer.Name = "txtSecurityAnswer"
         txtSecurityAnswer.PlaceholderText = "(Type in your answer)"
-        txtSecurityAnswer.Size = New Size(233, 25)
+        txtSecurityAnswer.Size = New Size(204, 25)
         txtSecurityAnswer.TabIndex = 3
         ' 
         ' cmbSecurityQuestion
         ' 
         cmbSecurityQuestion.BackColor = Color.LightGray
-        cmbSecurityQuestion.Font = New Font("Segoe UI", 10.0F)
+        cmbSecurityQuestion.Font = New Font("Segoe UI", 10F)
         cmbSecurityQuestion.FormattingEnabled = True
         cmbSecurityQuestion.Items.AddRange(New Object() {"--Select--", "What is your favorite color?", "In what city you were born?", "What was the name of your first pet?", "What's your mother's maiden name?", "What is your birthdate?"})
-        cmbSecurityQuestion.Location = New Point(214, 308)
-        cmbSecurityQuestion.Margin = New Padding(2, 3, 2, 3)
+        cmbSecurityQuestion.Location = New Point(187, 231)
+        cmbSecurityQuestion.Margin = New Padding(2, 2, 2, 2)
         cmbSecurityQuestion.Name = "cmbSecurityQuestion"
-        cmbSecurityQuestion.Size = New Size(266, 31)
+        cmbSecurityQuestion.Size = New Size(233, 25)
         cmbSecurityQuestion.TabIndex = 4
         ' 
         ' lblUsername
         ' 
         lblUsername.AutoSize = True
-        lblUsername.Font = New Font("Segoe UI", 12.0F)
-        lblUsername.Location = New Point(105, 103)
+        lblUsername.Font = New Font("Segoe UI", 12F)
+        lblUsername.Location = New Point(92, 77)
         lblUsername.Margin = New Padding(2, 0, 2, 0)
         lblUsername.Name = "lblUsername"
-        lblUsername.Size = New Size(103, 28)
+        lblUsername.Size = New Size(84, 21)
         lblUsername.TabIndex = 5
         lblUsername.Text = "Username:"
         ' 
         ' lblPass
         ' 
         lblPass.AutoSize = True
-        lblPass.Font = New Font("Segoe UI", 12.0F)
-        lblPass.Location = New Point(111, 192)
+        lblPass.Font = New Font("Segoe UI", 12F)
+        lblPass.Location = New Point(97, 144)
         lblPass.Margin = New Padding(2, 0, 2, 0)
         lblPass.Name = "lblPass"
-        lblPass.Size = New Size(97, 28)
+        lblPass.Size = New Size(79, 21)
         lblPass.TabIndex = 6
         lblPass.Text = "Password:"
         ' 
         ' lblSecQues
         ' 
         lblSecQues.AutoSize = True
-        lblSecQues.Font = New Font("Segoe UI", 12.0F)
-        lblSecQues.Location = New Point(25, 311)
+        lblSecQues.Font = New Font("Segoe UI", 12F)
+        lblSecQues.Location = New Point(22, 233)
         lblSecQues.Margin = New Padding(2, 0, 2, 0)
         lblSecQues.Name = "lblSecQues"
-        lblSecQues.Size = New Size(183, 28)
+        lblSecQues.Size = New Size(147, 21)
         lblSecQues.TabIndex = 7
         lblSecQues.Text = "Security Questions: "
         ' 
         ' lblAnswer
         ' 
         lblAnswer.AutoSize = True
-        lblAnswer.Font = New Font("Segoe UI", 12.0F)
-        lblAnswer.Location = New Point(124, 353)
+        lblAnswer.Font = New Font("Segoe UI", 12F)
+        lblAnswer.Location = New Point(108, 265)
         lblAnswer.Margin = New Padding(2, 0, 2, 0)
         lblAnswer.Name = "lblAnswer"
-        lblAnswer.Size = New Size(84, 28)
+        lblAnswer.Size = New Size(69, 21)
         lblAnswer.TabIndex = 8
         lblAnswer.Text = "Answer: "
         ' 
         ' BtnClear
         ' 
-        BtnClear.Font = New Font("Segoe UI", 12.0F)
-        BtnClear.Location = New Point(64, 493)
-        BtnClear.Margin = New Padding(2, 3, 2, 3)
+        BtnClear.Font = New Font("Segoe UI", 12F)
+        BtnClear.Location = New Point(56, 370)
+        BtnClear.Margin = New Padding(2, 2, 2, 2)
         BtnClear.Name = "BtnClear"
-        BtnClear.Size = New Size(161, 29)
+        BtnClear.Size = New Size(141, 22)
         BtnClear.TabIndex = 10
         BtnClear.Text = "Clear"
         BtnClear.UseVisualStyleBackColor = True
         ' 
         ' BtnRegister
         ' 
-        BtnRegister.Font = New Font("Segoe UI", 12.0F)
-        BtnRegister.Location = New Point(285, 493)
-        BtnRegister.Margin = New Padding(2, 3, 2, 3)
+        BtnRegister.Font = New Font("Segoe UI", 12F)
+        BtnRegister.Location = New Point(249, 370)
+        BtnRegister.Margin = New Padding(2, 2, 2, 2)
         BtnRegister.Name = "BtnRegister"
-        BtnRegister.Size = New Size(161, 29)
+        BtnRegister.Size = New Size(141, 22)
         BtnRegister.TabIndex = 11
         BtnRegister.Text = "Register"
         BtnRegister.UseVisualStyleBackColor = True
@@ -156,20 +156,20 @@ Partial Class FrmUserCreation
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 24.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(74, 28)
+        Label1.Font = New Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(65, 21)
         Label1.Name = "Label1"
-        Label1.Size = New Size(406, 54)
+        Label1.Size = New Size(325, 45)
         Label1.TabIndex = 12
         Label1.Text = "Create Your Account"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(36, 236)
+        Label2.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label2.Location = New Point(32, 177)
         Label2.Name = "Label2"
-        Label2.Size = New Size(172, 28)
+        Label2.Size = New Size(140, 21)
         Label2.TabIndex = 13
         Label2.Text = "Confirm Password:"
         ' 
@@ -177,8 +177,7 @@ Partial Class FrmUserCreation
         ' 
         TextBox1.BackColor = Color.LightGray
         TextBox1.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(214, 236)
-        TextBox1.Margin = New Padding(3, 4, 3, 4)
+        TextBox1.Location = New Point(187, 177)
         TextBox1.Name = "TextBox1"
         TextBox1.PlaceholderText = "(Confirm your password)"
         TextBox1.Size = New Size(233, 25)
@@ -187,8 +186,8 @@ Partial Class FrmUserCreation
         ' LinkLabel1
         ' 
         LinkLabel1.AutoSize = True
-        LinkLabel1.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        LinkLabel1.Location = New Point(214, 438)
+        LinkLabel1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        LinkLabel1.Location = New Point(187, 328)
         LinkLabel1.Name = "LinkLabel1"
         LinkLabel1.Size = New Size(107, 21)
         LinkLabel1.TabIndex = 15
@@ -198,46 +197,48 @@ Partial Class FrmUserCreation
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 12.0F)
-        Label4.Location = New Point(112, 150)
+        Label4.Font = New Font("Segoe UI", 12F)
+        Label4.Location = New Point(98, 112)
         Label4.Margin = New Padding(2, 0, 2, 0)
         Label4.Name = "Label4"
-        Label4.Size = New Size(96, 28)
+        Label4.Size = New Size(76, 21)
         Label4.TabIndex = 17
         Label4.Text = "Birthdate:"
         ' 
         ' DateTimePicker1
         ' 
         DateTimePicker1.CalendarMonthBackground = Color.LightGray
-        DateTimePicker1.Location = New Point(214, 152)
+        DateTimePicker1.Location = New Point(187, 114)
+        DateTimePicker1.Margin = New Padding(3, 2, 3, 2)
         DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(266, 27)
+        DateTimePicker1.Size = New Size(233, 23)
         DateTimePicker1.TabIndex = 18
         ' 
         ' CheckBox1
         ' 
         CheckBox1.AutoSize = True
-        CheckBox1.Location = New Point(451, 272)
+        CheckBox1.Location = New Point(395, 204)
+        CheckBox1.Margin = New Padding(3, 2, 3, 2)
         CheckBox1.Name = "CheckBox1"
-        CheckBox1.Size = New Size(18, 17)
+        CheckBox1.Size = New Size(15, 14)
         CheckBox1.TabIndex = 19
         CheckBox1.UseVisualStyleBackColor = True
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Location = New Point(335, 269)
+        Label3.Location = New Point(293, 202)
         Label3.Name = "Label3"
-        Label3.Size = New Size(110, 20)
+        Label3.Size = New Size(89, 15)
         Label3.TabIndex = 20
         Label3.Text = "Show Password"
         ' 
         ' FrmUserCreation
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.OldLace
-        ClientSize = New Size(537, 571)
+        ClientSize = New Size(470, 428)
         Controls.Add(Label3)
         Controls.Add(CheckBox1)
         Controls.Add(DateTimePicker1)
@@ -256,7 +257,10 @@ Partial Class FrmUserCreation
         Controls.Add(txtSecurityAnswer)
         Controls.Add(txtCreatePass)
         Controls.Add(txtCreateUsername)
-        Margin = New Padding(2, 3, 2, 3)
+        FormBorderStyle = FormBorderStyle.FixedSingle
+        Margin = New Padding(2, 2, 2, 2)
+        MaximizeBox = False
+        MinimizeBox = False
         Name = "FrmUserCreation"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Sign Up"

@@ -18,41 +18,41 @@ Public Class FrmInterface
         conn = New MySqlConnection(connString)
     End Sub
 
-    Private Sub panelMain_Paint(sender As Object, e As PaintEventArgs) Handles panelMain.Paint
-
-    End Sub
-
     Private Sub LoadUserControl(ctrl As UserControl)
         panelMain.Controls.Clear()
         ctrl.Dock = DockStyle.Fill
         panelMain.Controls.Add(ctrl)
     End Sub
 
-    Private Sub linkDashboard_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linkDashboard.LinkClicked
-        LoadUserControl(New dashboard)
+    Private Sub btnDB_Click(sender As Object, e As EventArgs) Handles btnDB.Click
+        LoadUserControl(New dashboard())
     End Sub
 
-    Private Sub linkInventory_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linkInventory.LinkClicked
-        LoadUserControl(New inventory)
+    Private Sub btnInv_Click(sender As Object, e As EventArgs) Handles btnInv.Click
+        LoadUserControl(New inventory())
     End Sub
 
-    Private Sub linkOrders_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linkOrders.LinkClicked
-        LoadUserControl(New orders)
+    Private Sub btnOrder_Click(sender As Object, e As EventArgs) Handles btnOrder.Click
+        LoadUserControl(New orders())
     End Sub
 
-    Private Sub linkHistory_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linkHistory.LinkClicked
-        LoadUserControl(New history)
+    Private Sub btnHist_Click(sender As Object, e As EventArgs) Handles btnHist.Click
+        LoadUserControl(New history())
     End Sub
 
-    Private Sub linkStaff_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linkStaff.LinkClicked
+    Private Sub btnStaff_Click(sender As Object, e As EventArgs) Handles btnStaff.Click
+        LoadUserControl(New staff())
+    End Sub
+
+    Private Sub btnAcc_Click(sender As Object, e As EventArgs) Handles btnAcc.Click
+        LoadUserControl(New accounts())
+    End Sub
+
+    Private Sub bgPanelTop_Paint(sender As Object, e As PaintEventArgs) Handles bgPanelTop.Paint
 
     End Sub
 
-    Private Sub linkCustomer_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linkCustomer.LinkClicked
-
-    End Sub
-
-    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles displayMsg.LinkClicked
+    Private Sub FrmInterface_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

@@ -22,10 +22,9 @@ Partial Class ViewCart
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         DataGridView1 = New DataGridView()
         Panel1 = New Panel()
-        Button4 = New Button()
         Label1 = New Label()
         ComboBox1 = New ComboBox()
         TextBox1 = New TextBox()
@@ -45,9 +44,9 @@ Partial Class ViewCart
         DataGridView1.AllowUserToAddRows = False
         DataGridView1.AllowUserToResizeColumns = False
         DataGridView1.AllowUserToResizeRows = False
-        DataGridViewCellStyle2.BackColor = Color.White
-        DataGridViewCellStyle2.ForeColor = Color.Black
-        DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.BackColor = Color.White
+        DataGridViewCellStyle1.ForeColor = Color.Black
+        DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         DataGridView1.BackgroundColor = Color.FromArgb(CByte(185), CByte(197), CByte(210))
         DataGridView1.BorderStyle = BorderStyle.None
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -60,7 +59,6 @@ Partial Class ViewCart
         ' Panel1
         ' 
         Panel1.BackColor = Color.LightSlateGray
-        Panel1.Controls.Add(Button4)
         Panel1.Controls.Add(Label1)
         Panel1.Controls.Add(ComboBox1)
         Panel1.Controls.Add(TextBox1)
@@ -68,17 +66,6 @@ Partial Class ViewCart
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(1006, 50)
         Panel1.TabIndex = 1
-        ' 
-        ' Button4
-        ' 
-        Button4.BackColor = Color.FloralWhite
-        Button4.FlatStyle = FlatStyle.Flat
-        Button4.Location = New Point(664, 10)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(122, 29)
-        Button4.TabIndex = 6
-        Button4.Text = "Apply"
-        Button4.UseVisualStyleBackColor = False
         ' 
         ' Label1
         ' 
@@ -99,7 +86,6 @@ Partial Class ViewCart
         ComboBox1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ComboBox1.ForeColor = SystemColors.Window
         ComboBox1.FormattingEnabled = True
-        ComboBox1.Items.AddRange(New Object() {"name", "category"})
         ComboBox1.Location = New Point(83, 10)
         ComboBox1.Name = "ComboBox1"
         ComboBox1.Size = New Size(205, 29)
@@ -214,5 +200,4 @@ Partial Class ViewCart
     Friend WithEvents Button2 As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
 End Class

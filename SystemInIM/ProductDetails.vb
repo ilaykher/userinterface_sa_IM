@@ -23,59 +23,47 @@ Public Class ProductDetails
         Dim connectionString As String = "server=localhost;user=root;password=;database=information_management"
 
         Using con As New MySqlConnection(connectionString)
+
             con.Open()
 
             Dim cmd As New MySqlCommand("SELECT * FROM Products WHERE product_name = @productName", con)
             cmd.Parameters.AddWithValue("@productName", productName)
-
             Using reader As MySqlDataReader = cmd.ExecuteReader()
                 If reader.Read() Then
 
-                    ' === Basic Details ===
                     Label1.Text = reader("product_name").ToString()
-                    Label2.Text = "₱" & Convert.ToDecimal(reader("price")).ToString("N2")
+                    Label2.Text = "₱HP" & Convert.ToDecimal(reader("price")).ToString("N2")
                     Label3.Text = reader("description").ToString()
                     Label4.Text = "Category: " & reader("category").ToString()
                     Label5.Text = "Stock: " & reader("stock").ToString()
                     Label6.Text = "Created Date: " & reader("created_date").ToString()
+                    Dim imagePath As String = reader("image_path").ToString()
 
-                    ' === Sold & Location (fixed) ===
-                    Dim soldCount As Integer = 0
-                    If Not IsDBNull(reader("sold_count")) Then
-                        soldCount = Convert.ToInt32(reader("sold_count"))
-                    End If
-                    lblSold.Text = "Items Sold: " & soldCount.ToString()
+                    '=======asssign to variables i created aboove=========='
 
-                    Dim locationText As String = "N/A"
-                    If Not IsDBNull(reader("location")) Then
-                        locationText = reader("location").ToString()
-                    End If
-                    lblLocation.Text = "Location: " & locationText
-
-                    ' === Assign Variables ===
                     selectedProductID = Convert.ToInt32(reader("product_id"))
                     selectedProductName = reader("product_name").ToString()
                     selectedPrice = Convert.ToDecimal(reader("price"))
                     selectedDescription = reader("description").ToString()
                     selectedStock = Convert.ToInt32(reader("stock"))
 
-                    ' === Image ===
-                    Dim imagePath As String = reader("image_path").ToString()
                     If Not String.IsNullOrEmpty(imagePath) AndAlso IO.File.Exists(imagePath) Then
                         PictureBox1.Image = Image.FromFile(imagePath)
                         PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
                     Else
+                        ' Handle missing image file
                         PictureBox1.Image = Nothing
+                        MessageBox.Show("Image file not found: " & imagePath, "Image Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                     End If
-
                 Else
                     MessageBox.Show("Product not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
             End Using
 
         End Using
-    End Sub
 
+
+    End Sub
 
 
     '=================Add to cart button========================

@@ -32,8 +32,8 @@ Partial Class FrmLogin
         LinkLabel1 = New LinkLabel()
         LinkLabel2 = New LinkLabel()
         Panel1 = New Panel()
-        Label3 = New Label()
         CheckBox1 = New CheckBox()
+        Label3 = New Label()
         Panel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -41,7 +41,7 @@ Partial Class FrmLogin
         ' 
         lblUsername.AutoSize = True
         lblUsername.BackColor = Color.OldLace
-        lblUsername.Font = New Font("Segoe UI", 12.0F)
+        lblUsername.Font = New Font("Segoe UI", 12F)
         lblUsername.Location = New Point(25, 167)
         lblUsername.Margin = New Padding(2, 0, 2, 0)
         lblUsername.Name = "lblUsername"
@@ -53,7 +53,7 @@ Partial Class FrmLogin
         ' 
         lblPassword.AutoSize = True
         lblPassword.BackColor = Color.OldLace
-        lblPassword.Font = New Font("Segoe UI", 12.0F)
+        lblPassword.Font = New Font("Segoe UI", 12F)
         lblPassword.Location = New Point(31, 245)
         lblPassword.Margin = New Padding(2, 0, 2, 0)
         lblPassword.Name = "lblPassword"
@@ -63,7 +63,7 @@ Partial Class FrmLogin
         ' 
         ' BtnLogin
         ' 
-        BtnLogin.Font = New Font("Segoe UI", 12.0F)
+        BtnLogin.Font = New Font("Segoe UI", 12F)
         BtnLogin.Location = New Point(285, 592)
         BtnLogin.Margin = New Padding(2, 3, 2, 3)
         BtnLogin.Name = "BtnLogin"
@@ -74,7 +74,7 @@ Partial Class FrmLogin
         ' 
         ' BtnClear
         ' 
-        BtnClear.Font = New Font("Segoe UI", 12.0F)
+        BtnClear.Font = New Font("Segoe UI", 12F)
         BtnClear.Location = New Point(69, 592)
         BtnClear.Margin = New Padding(2, 3, 2, 3)
         BtnClear.Name = "BtnClear"
@@ -85,7 +85,7 @@ Partial Class FrmLogin
         ' 
         ' txtUsername
         ' 
-        txtUsername.Font = New Font("Segoe UI", 10.0F)
+        txtUsername.Font = New Font("Segoe UI", 10F)
         txtUsername.Location = New Point(138, 164)
         txtUsername.Margin = New Padding(2, 3, 2, 3)
         txtUsername.Name = "txtUsername"
@@ -95,7 +95,7 @@ Partial Class FrmLogin
         ' 
         ' txtPassword
         ' 
-        txtPassword.Font = New Font("Segoe UI", 10.0F)
+        txtPassword.Font = New Font("Segoe UI", 10F)
         txtPassword.Location = New Point(138, 245)
         txtPassword.Margin = New Padding(2, 3, 2, 3)
         txtPassword.Name = "txtPassword"
@@ -108,8 +108,8 @@ Partial Class FrmLogin
         ' 
         Label1.AutoSize = True
         Label1.BackColor = Color.OldLace
-        Label1.Font = New Font("Segoe UI", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(123, 57)
+        Label1.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(102, 44)
         Label1.Margin = New Padding(2, 0, 2, 0)
         Label1.Name = "Label1"
         Label1.Size = New Size(329, 41)
@@ -145,19 +145,11 @@ Partial Class FrmLogin
         Panel1.BackColor = Color.OldLace
         Panel1.Controls.Add(CheckBox1)
         Panel1.Controls.Add(Label3)
+        Panel1.Controls.Add(Label1)
         Panel1.Location = New Point(12, 12)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(513, 705)
         Panel1.TabIndex = 11
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Location = New Point(321, 279)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(110, 20)
-        Label3.TabIndex = 1
-        Label3.Text = "Show Password"
         ' 
         ' CheckBox1
         ' 
@@ -168,6 +160,15 @@ Partial Class FrmLogin
         CheckBox1.TabIndex = 2
         CheckBox1.UseVisualStyleBackColor = True
         ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Location = New Point(321, 279)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(110, 20)
+        Label3.TabIndex = 1
+        Label3.Text = "Show Password"
+        ' 
         ' FrmLogin
         ' 
         AutoScaleDimensions = New SizeF(8.0F, 20.0F)
@@ -176,7 +177,6 @@ Partial Class FrmLogin
         ClientSize = New Size(537, 729)
         Controls.Add(LinkLabel2)
         Controls.Add(LinkLabel1)
-        Controls.Add(Label1)
         Controls.Add(txtPassword)
         Controls.Add(txtUsername)
         Controls.Add(BtnClear)
@@ -184,7 +184,10 @@ Partial Class FrmLogin
         Controls.Add(lblUsername)
         Controls.Add(BtnLogin)
         Controls.Add(Panel1)
+        FormBorderStyle = FormBorderStyle.FixedSingle
         Margin = New Padding(2, 3, 2, 3)
+        MaximizeBox = False
+        MinimizeBox = False
         Name = "FrmLogin"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Log In"

@@ -64,9 +64,9 @@ Partial Class UserInetrfaceNew
         Label1.AutoSize = True
         Label1.Font = New Font("Berlin Sans FB", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.OldLace
-        Label1.Location = New Point(19, 14)
+        Label1.Location = New Point(22, 19)
         Label1.Name = "Label1"
-        Label1.Size = New Size(367, 30)
+        Label1.Size = New Size(455, 37)
         Label1.TabIndex = 0
         Label1.Text = "ELECTRONIC DEVICE MARKET"
         ' 
@@ -75,10 +75,10 @@ Partial Class UserInetrfaceNew
         Panel3.AutoScroll = True
         Panel3.BackColor = Color.OldLace
         Panel3.Controls.Add(Panel5)
-        Panel3.Location = New Point(293, 62)
+        Panel3.Location = New Point(335, 83)
         Panel3.Margin = New Padding(0)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(983, 702)
+        Panel3.Size = New Size(1123, 936)
         Panel3.TabIndex = 2
         ' 
         ' Panel5
@@ -88,9 +88,10 @@ Partial Class UserInetrfaceNew
         Panel5.Controls.Add(Label12)
         Panel5.Controls.Add(Label11)
         Panel5.Controls.Add(PictureBox1)
-        Panel5.Location = New Point(105, 56)
+        Panel5.Location = New Point(120, 75)
+        Panel5.Margin = New Padding(3, 4, 3, 4)
         Panel5.Name = "Panel5"
-        Panel5.Size = New Size(310, 411)
+        Panel5.Size = New Size(354, 547)
         Panel5.TabIndex = 1
         ' 
         ' Button1
@@ -99,9 +100,10 @@ Partial Class UserInetrfaceNew
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.OldLace
-        Button1.Location = New Point(166, 360)
+        Button1.Location = New Point(190, 480)
+        Button1.Margin = New Padding(3, 4, 3, 4)
         Button1.Name = "Button1"
-        Button1.Size = New Size(116, 32)
+        Button1.Size = New Size(133, 43)
         Button1.TabIndex = 3
         Button1.Text = "View Details"
         Button1.UseVisualStyleBackColor = False
@@ -111,9 +113,9 @@ Partial Class UserInetrfaceNew
         Label12.AutoSize = True
         Label12.Font = New Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label12.ForeColor = Color.IndianRed
-        Label12.Location = New Point(32, 289)
+        Label12.Location = New Point(37, 385)
         Label12.Name = "Label12"
-        Label12.Size = New Size(60, 20)
+        Label12.Size = New Size(78, 25)
         Label12.TabIndex = 2
         Label12.Text = "PHP 95"
         ' 
@@ -122,18 +124,19 @@ Partial Class UserInetrfaceNew
         Label11.AutoSize = True
         Label11.Font = New Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label11.ForeColor = Color.DarkSlateBlue
-        Label11.Location = New Point(32, 258)
+        Label11.Location = New Point(37, 344)
         Label11.Name = "Label11"
-        Label11.Size = New Size(209, 20)
+        Label11.Size = New Size(264, 25)
         Label11.TabIndex = 1
         Label11.Text = "Tasten Mouse Gaming Mouse"
         ' 
         ' PictureBox1
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(32, 18)
+        PictureBox1.Location = New Point(37, 24)
+        PictureBox1.Margin = New Padding(3, 4, 3, 4)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(250, 219)
+        PictureBox1.Size = New Size(286, 292)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
@@ -146,10 +149,10 @@ Partial Class UserInetrfaceNew
         Panel2.Controls.Add(ComboBox1)
         Panel2.Controls.Add(Label1)
         Panel2.Controls.Add(Label2)
-        Panel2.Location = New Point(-7, -3)
+        Panel2.Location = New Point(-8, -4)
         Panel2.Margin = New Padding(0)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(1283, 65)
+        Panel2.Size = New Size(1466, 87)
         Panel2.TabIndex = 1
         ' 
         ' TextBox1
@@ -158,9 +161,10 @@ Partial Class UserInetrfaceNew
         TextBox1.BackColor = Color.LightSlateGray
         TextBox1.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
         TextBox1.ForeColor = SystemColors.Info
-        TextBox1.Location = New Point(629, 15)
+        TextBox1.Location = New Point(719, 20)
+        TextBox1.Margin = New Padding(3, 4, 3, 4)
         TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(457, 29)
+        TextBox1.Size = New Size(522, 34)
         TextBox1.TabIndex = 3
         ' 
         ' Label4
@@ -168,9 +172,9 @@ Partial Class UserInetrfaceNew
         Label4.AutoSize = True
         Label4.Font = New Font("Segoe UI Historic", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.OldLace
-        Label4.Location = New Point(1138, 12)
+        Label4.Location = New Point(1301, 16)
         Label4.Name = "Label4"
-        Label4.Size = New Size(61, 32)
+        Label4.Size = New Size(75, 41)
         Label4.TabIndex = 2
         Label4.Text = " 👤 "
         ' 
@@ -183,9 +187,10 @@ Partial Class UserInetrfaceNew
         ComboBox1.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
         ComboBox1.ForeColor = Color.OldLace
         ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(417, 15)
+        ComboBox1.Location = New Point(477, 20)
+        ComboBox1.Margin = New Padding(3, 4, 3, 4)
         ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(206, 29)
+        ComboBox1.Size = New Size(235, 36)
         ComboBox1.TabIndex = 1
         ' 
         ' Label2
@@ -193,9 +198,9 @@ Partial Class UserInetrfaceNew
         Label2.AutoSize = True
         Label2.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.FloralWhite
-        Label2.Location = New Point(1198, 12)
+        Label2.Location = New Point(1369, 16)
         Label2.Name = "Label2"
-        Label2.Size = New Size(61, 32)
+        Label2.Size = New Size(75, 41)
         Label2.TabIndex = 0
         Label2.Text = " " & ChrW(55357) & ChrW(57042) & " "
         ' 
@@ -204,9 +209,9 @@ Partial Class UserInetrfaceNew
         Label3.AutoSize = True
         Label3.Font = New Font("Consolas", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.OldLace
-        Label3.Location = New Point(44, 121)
+        Label3.Location = New Point(50, 161)
         Label3.Name = "Label3"
-        Label3.Size = New Size(106, 24)
+        Label3.Size = New Size(134, 32)
         Label3.TabIndex = 0
         Label3.Text = "Filters:"
         ' 
@@ -215,9 +220,9 @@ Partial Class UserInetrfaceNew
         Label5.AutoSize = True
         Label5.Font = New Font("Consolas", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.OldLace
-        Label5.Location = New Point(44, 434)
+        Label5.Location = New Point(50, 579)
         Label5.Name = "Label5"
-        Label5.Size = New Size(130, 22)
+        Label5.Size = New Size(168, 28)
         Label5.TabIndex = 1
         Label5.Text = "Availability"
         ' 
@@ -226,9 +231,9 @@ Partial Class UserInetrfaceNew
         Label6.AutoSize = True
         Label6.Font = New Font("Consolas", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.OldLace
-        Label6.Location = New Point(44, 177)
+        Label6.Location = New Point(50, 236)
         Label6.Name = "Label6"
-        Label6.Size = New Size(60, 22)
+        Label6.Size = New Size(77, 28)
         Label6.TabIndex = 2
         Label6.Text = "Price"
         ' 
@@ -237,9 +242,10 @@ Partial Class UserInetrfaceNew
         RadioButton1.AutoSize = True
         RadioButton1.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         RadioButton1.ForeColor = Color.OldLace
-        RadioButton1.Location = New Point(75, 472)
+        RadioButton1.Location = New Point(86, 629)
+        RadioButton1.Margin = New Padding(3, 4, 3, 4)
         RadioButton1.Name = "RadioButton1"
-        RadioButton1.Size = New Size(99, 23)
+        RadioButton1.Size = New Size(119, 27)
         RadioButton1.TabIndex = 3
         RadioButton1.TabStop = True
         RadioButton1.Text = "In Stock"
@@ -262,10 +268,10 @@ Partial Class UserInetrfaceNew
         Panel1.Controls.Add(Label6)
         Panel1.Controls.Add(Label5)
         Panel1.Controls.Add(Label3)
-        Panel1.Location = New Point(-7, -3)
+        Panel1.Location = New Point(-8, -4)
         Panel1.Margin = New Padding(0)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(300, 767)
+        Panel1.Size = New Size(343, 1023)
         Panel1.TabIndex = 0
         ' 
         ' Button2
@@ -273,10 +279,9 @@ Partial Class UserInetrfaceNew
         Button2.BackColor = Color.OldLace
         Button2.FlatStyle = FlatStyle.Flat
         Button2.ForeColor = SystemColors.ActiveCaptionText
-        Button2.Location = New Point(135, 628)
-        Button2.Margin = New Padding(3, 2, 3, 2)
+        Button2.Location = New Point(154, 838)
         Button2.Name = "Button2"
-        Button2.Size = New Size(123, 30)
+        Button2.Size = New Size(141, 40)
         Button2.TabIndex = 13
         Button2.Text = "Apply"
         Button2.UseVisualStyleBackColor = False
@@ -286,9 +291,10 @@ Partial Class UserInetrfaceNew
         RadioButton3.AutoSize = True
         RadioButton3.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         RadioButton3.ForeColor = Color.OldLace
-        RadioButton3.Location = New Point(75, 530)
+        RadioButton3.Location = New Point(86, 707)
+        RadioButton3.Margin = New Padding(3, 4, 3, 4)
         RadioButton3.Name = "RadioButton3"
-        RadioButton3.Size = New Size(126, 23)
+        RadioButton3.Size = New Size(152, 27)
         RadioButton3.TabIndex = 12
         RadioButton3.TabStop = True
         RadioButton3.Text = "Select Both"
@@ -297,9 +303,10 @@ Partial Class UserInetrfaceNew
         ' Panel8
         ' 
         Panel8.BackColor = Color.OldLace
-        Panel8.Location = New Point(20, 97)
+        Panel8.Location = New Point(23, 129)
+        Panel8.Margin = New Padding(3, 4, 3, 4)
         Panel8.Name = "Panel8"
-        Panel8.Size = New Size(3, 621)
+        Panel8.Size = New Size(3, 828)
         Panel8.TabIndex = 11
         ' 
         ' Label10
@@ -307,9 +314,9 @@ Partial Class UserInetrfaceNew
         Label10.AutoSize = True
         Label10.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label10.ForeColor = Color.OldLace
-        Label10.Location = New Point(68, 390)
+        Label10.Location = New Point(78, 520)
         Label10.Name = "Label10"
-        Label10.Size = New Size(64, 18)
+        Label10.Size = New Size(80, 22)
         Label10.TabIndex = 10
         Label10.Text = "Price: "
         ' 
@@ -318,17 +325,18 @@ Partial Class UserInetrfaceNew
         Label9.AutoSize = True
         Label9.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.OldLace
-        Label9.Location = New Point(63, 283)
+        Label9.Location = New Point(72, 377)
         Label9.Name = "Label9"
-        Label9.Size = New Size(64, 18)
+        Label9.Size = New Size(80, 22)
         Label9.TabIndex = 9
         Label9.Text = "Price: "
         ' 
         ' TrackBar2
         ' 
-        TrackBar2.Location = New Point(44, 357)
+        TrackBar2.Location = New Point(50, 476)
+        TrackBar2.Margin = New Padding(3, 4, 3, 4)
         TrackBar2.Name = "TrackBar2"
-        TrackBar2.Size = New Size(214, 45)
+        TrackBar2.Size = New Size(245, 56)
         TrackBar2.TabIndex = 8
         ' 
         ' Label8
@@ -336,9 +344,9 @@ Partial Class UserInetrfaceNew
         Label8.AutoSize = True
         Label8.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label8.ForeColor = Color.OldLace
-        Label8.Location = New Point(44, 325)
+        Label8.Location = New Point(50, 433)
         Label8.Name = "Label8"
-        Label8.Size = New Size(135, 19)
+        Label8.Size = New Size(164, 23)
         Label8.TabIndex = 7
         Label8.Text = "Minimum Price:"
         ' 
@@ -347,17 +355,18 @@ Partial Class UserInetrfaceNew
         Label7.AutoSize = True
         Label7.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = Color.OldLace
-        Label7.Location = New Point(44, 219)
+        Label7.Location = New Point(50, 292)
         Label7.Name = "Label7"
-        Label7.Size = New Size(135, 19)
+        Label7.Size = New Size(164, 23)
         Label7.TabIndex = 6
         Label7.Text = "Maximum Price:"
         ' 
         ' TrackBar1
         ' 
-        TrackBar1.Location = New Point(44, 251)
+        TrackBar1.Location = New Point(50, 335)
+        TrackBar1.Margin = New Padding(3, 4, 3, 4)
         TrackBar1.Name = "TrackBar1"
-        TrackBar1.Size = New Size(214, 45)
+        TrackBar1.Size = New Size(245, 56)
         TrackBar1.TabIndex = 5
         ' 
         ' RadioButton2
@@ -365,9 +374,10 @@ Partial Class UserInetrfaceNew
         RadioButton2.AutoSize = True
         RadioButton2.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         RadioButton2.ForeColor = Color.OldLace
-        RadioButton2.Location = New Point(75, 501)
+        RadioButton2.Location = New Point(86, 668)
+        RadioButton2.Margin = New Padding(3, 4, 3, 4)
         RadioButton2.Name = "RadioButton2"
-        RadioButton2.Size = New Size(135, 23)
+        RadioButton2.Size = New Size(163, 27)
         RadioButton2.TabIndex = 4
         RadioButton2.TabStop = True
         RadioButton2.Text = "Out of Stock"
@@ -375,14 +385,18 @@ Partial Class UserInetrfaceNew
         ' 
         ' UserInetrfaceNew
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1278, 763)
+        ClientSize = New Size(1458, 1009)
         Controls.Add(Panel3)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
-        MaximumSize = New Size(1294, 802)
-        MinimumSize = New Size(1294, 802)
+        FormBorderStyle = FormBorderStyle.FixedSingle
+        Margin = New Padding(3, 4, 3, 4)
+        MaximizeBox = False
+        MaximumSize = New Size(1476, 1056)
+        MinimizeBox = False
+        MinimumSize = New Size(1476, 1056)
         Name = "UserInetrfaceNew"
         Text = "UserInetrfaceNew"
         Panel3.ResumeLayout(False)

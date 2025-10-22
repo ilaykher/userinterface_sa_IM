@@ -22,16 +22,17 @@ Partial Class FrmInterface
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmInterface))
         bgPanelTop = New Panel()
         adminPic1 = New PictureBox()
         lblAdmintxt = New Label()
         bgPanelLeft = New Panel()
-        linkDashboard = New LinkLabel()
-        linkCustomer = New LinkLabel()
-        linkStaff = New LinkLabel()
-        linkHistory = New LinkLabel()
-        linkOrders = New LinkLabel()
-        linkInventory = New LinkLabel()
+        btnAcc = New Button()
+        btnStaff = New Button()
+        btnHist = New Button()
+        btnOrder = New Button()
+        btnInv = New Button()
+        btnDB = New Button()
         panelMain = New Panel()
         displayMsg = New LinkLabel()
         bgPanelTop.SuspendLayout()
@@ -52,9 +53,11 @@ Partial Class FrmInterface
         ' 
         ' adminPic1
         ' 
+        adminPic1.Image = CType(resources.GetObject("adminPic1.Image"), Image)
         adminPic1.Location = New Point(1271, 13)
         adminPic1.Name = "adminPic1"
         adminPic1.Size = New Size(83, 77)
+        adminPic1.SizeMode = PictureBoxSizeMode.StretchImage
         adminPic1.TabIndex = 1
         adminPic1.TabStop = False
         ' 
@@ -72,100 +75,88 @@ Partial Class FrmInterface
         ' 
         bgPanelLeft.BackColor = SystemColors.ActiveCaption
         bgPanelLeft.BorderStyle = BorderStyle.FixedSingle
-        bgPanelLeft.Controls.Add(linkDashboard)
-        bgPanelLeft.Controls.Add(linkCustomer)
-        bgPanelLeft.Controls.Add(linkStaff)
-        bgPanelLeft.Controls.Add(linkHistory)
-        bgPanelLeft.Controls.Add(linkOrders)
-        bgPanelLeft.Controls.Add(linkInventory)
+        bgPanelLeft.Controls.Add(btnAcc)
+        bgPanelLeft.Controls.Add(btnStaff)
+        bgPanelLeft.Controls.Add(btnHist)
+        bgPanelLeft.Controls.Add(btnOrder)
+        bgPanelLeft.Controls.Add(btnInv)
+        bgPanelLeft.Controls.Add(btnDB)
         bgPanelLeft.Location = New Point(-9, 109)
         bgPanelLeft.Name = "bgPanelLeft"
         bgPanelLeft.Size = New Size(301, 579)
         bgPanelLeft.TabIndex = 1
         ' 
-        ' linkDashboard
+        ' btnAcc
         ' 
-        linkDashboard.ActiveLinkColor = Color.White
-        linkDashboard.AutoSize = True
-        linkDashboard.Font = New Font("Calibri", 24F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        linkDashboard.LinkBehavior = LinkBehavior.NeverUnderline
-        linkDashboard.LinkColor = Color.Black
-        linkDashboard.Location = New Point(21, 41)
-        linkDashboard.Name = "linkDashboard"
-        linkDashboard.Size = New Size(159, 39)
-        linkDashboard.TabIndex = 0
-        linkDashboard.TabStop = True
-        linkDashboard.Text = "Dashboard"
+        btnAcc.BackColor = SystemColors.ActiveCaption
+        btnAcc.FlatStyle = FlatStyle.Flat
+        btnAcc.Font = New Font("Calibri", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnAcc.Location = New Point(7, 489)
+        btnAcc.Name = "btnAcc"
+        btnAcc.Size = New Size(293, 92)
+        btnAcc.TabIndex = 9
+        btnAcc.Text = "Customer Accounts"
+        btnAcc.UseVisualStyleBackColor = False
         ' 
-        ' linkCustomer
+        ' btnStaff
         ' 
-        linkCustomer.ActiveLinkColor = Color.White
-        linkCustomer.AutoSize = True
-        linkCustomer.Font = New Font("Calibri", 24F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        linkCustomer.LinkBehavior = LinkBehavior.NeverUnderline
-        linkCustomer.LinkColor = Color.Black
-        linkCustomer.Location = New Point(21, 362)
-        linkCustomer.Name = "linkCustomer"
-        linkCustomer.Size = New Size(274, 39)
-        linkCustomer.TabIndex = 5
-        linkCustomer.TabStop = True
-        linkCustomer.Text = "Customer Accounts"
+        btnStaff.BackColor = SystemColors.ActiveCaption
+        btnStaff.FlatStyle = FlatStyle.Flat
+        btnStaff.Font = New Font("Calibri", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnStaff.Location = New Point(7, 391)
+        btnStaff.Name = "btnStaff"
+        btnStaff.Size = New Size(293, 92)
+        btnStaff.TabIndex = 9
+        btnStaff.Text = "Manage Staff"
+        btnStaff.UseVisualStyleBackColor = False
         ' 
-        ' linkStaff
+        ' btnHist
         ' 
-        linkStaff.ActiveLinkColor = Color.White
-        linkStaff.AutoSize = True
-        linkStaff.Font = New Font("Calibri", 24F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        linkStaff.LinkBehavior = LinkBehavior.NeverUnderline
-        linkStaff.LinkColor = Color.Black
-        linkStaff.Location = New Point(21, 299)
-        linkStaff.Name = "linkStaff"
-        linkStaff.Size = New Size(189, 39)
-        linkStaff.TabIndex = 4
-        linkStaff.TabStop = True
-        linkStaff.Text = "Manage Staff"
+        btnHist.BackColor = SystemColors.ActiveCaption
+        btnHist.FlatStyle = FlatStyle.Flat
+        btnHist.Font = New Font("Calibri", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnHist.Location = New Point(7, 293)
+        btnHist.Name = "btnHist"
+        btnHist.Size = New Size(293, 92)
+        btnHist.TabIndex = 10
+        btnHist.Text = "Transaction History"
+        btnHist.UseVisualStyleBackColor = False
         ' 
-        ' linkHistory
+        ' btnOrder
         ' 
-        linkHistory.ActiveLinkColor = Color.White
-        linkHistory.AutoSize = True
-        linkHistory.Font = New Font("Calibri", 24F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        linkHistory.LinkBehavior = LinkBehavior.NeverUnderline
-        linkHistory.LinkColor = Color.Black
-        linkHistory.Location = New Point(21, 232)
-        linkHistory.Name = "linkHistory"
-        linkHistory.Size = New Size(267, 39)
-        linkHistory.TabIndex = 3
-        linkHistory.TabStop = True
-        linkHistory.Text = "Transaction History"
+        btnOrder.BackColor = SystemColors.ActiveCaption
+        btnOrder.FlatStyle = FlatStyle.Flat
+        btnOrder.Font = New Font("Calibri", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnOrder.Location = New Point(7, 195)
+        btnOrder.Name = "btnOrder"
+        btnOrder.Size = New Size(293, 92)
+        btnOrder.TabIndex = 9
+        btnOrder.Text = "Orders"
+        btnOrder.UseVisualStyleBackColor = False
         ' 
-        ' linkOrders
+        ' btnInv
         ' 
-        linkOrders.ActiveLinkColor = Color.White
-        linkOrders.AutoSize = True
-        linkOrders.Font = New Font("Calibri", 24F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        linkOrders.LinkBehavior = LinkBehavior.NeverUnderline
-        linkOrders.LinkColor = Color.Black
-        linkOrders.Location = New Point(21, 169)
-        linkOrders.Name = "linkOrders"
-        linkOrders.Size = New Size(105, 39)
-        linkOrders.TabIndex = 2
-        linkOrders.TabStop = True
-        linkOrders.Text = "Orders"
+        btnInv.BackColor = SystemColors.ActiveCaption
+        btnInv.FlatStyle = FlatStyle.Flat
+        btnInv.Font = New Font("Calibri", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnInv.Location = New Point(7, 97)
+        btnInv.Name = "btnInv"
+        btnInv.Size = New Size(293, 92)
+        btnInv.TabIndex = 8
+        btnInv.Text = "Inventory"
+        btnInv.UseVisualStyleBackColor = False
         ' 
-        ' linkInventory
+        ' btnDB
         ' 
-        linkInventory.ActiveLinkColor = Color.White
-        linkInventory.AutoSize = True
-        linkInventory.Font = New Font("Calibri", 24F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        linkInventory.LinkBehavior = LinkBehavior.NeverUnderline
-        linkInventory.LinkColor = Color.Black
-        linkInventory.Location = New Point(21, 103)
-        linkInventory.Name = "linkInventory"
-        linkInventory.Size = New Size(141, 39)
-        linkInventory.TabIndex = 1
-        linkInventory.TabStop = True
-        linkInventory.Text = "Inventory"
+        btnDB.BackColor = SystemColors.ActiveCaption
+        btnDB.FlatStyle = FlatStyle.Flat
+        btnDB.Font = New Font("Calibri", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnDB.Location = New Point(7, -1)
+        btnDB.Name = "btnDB"
+        btnDB.Size = New Size(293, 92)
+        btnDB.TabIndex = 7
+        btnDB.Text = "Dashboard"
+        btnDB.UseVisualStyleBackColor = False
         ' 
         ' panelMain
         ' 
@@ -210,7 +201,6 @@ Partial Class FrmInterface
         bgPanelTop.PerformLayout()
         CType(adminPic1, ComponentModel.ISupportInitialize).EndInit()
         bgPanelLeft.ResumeLayout(False)
-        bgPanelLeft.PerformLayout()
         panelMain.ResumeLayout(False)
         panelMain.PerformLayout()
         ResumeLayout(False)
@@ -220,12 +210,12 @@ Partial Class FrmInterface
     Friend WithEvents lblAdmintxt As Label
     Friend WithEvents adminPic1 As PictureBox
     Friend WithEvents bgPanelLeft As Panel
-    Friend WithEvents linkDashboard As LinkLabel
-    Friend WithEvents linkHistory As LinkLabel
-    Friend WithEvents linkOrders As LinkLabel
-    Friend WithEvents linkInventory As LinkLabel
-    Friend WithEvents linkStaff As LinkLabel
-    Friend WithEvents linkCustomer As LinkLabel
     Friend WithEvents panelMain As Panel
     Friend WithEvents displayMsg As LinkLabel
+    Friend WithEvents btnDB As Button
+    Friend WithEvents btnInv As Button
+    Friend WithEvents btnAcc As Button
+    Friend WithEvents btnStaff As Button
+    Friend WithEvents btnHist As Button
+    Friend WithEvents btnOrder As Button
 End Class

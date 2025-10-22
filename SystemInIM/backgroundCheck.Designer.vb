@@ -44,18 +44,15 @@ Partial Class backgroundCheck
         TextBox8 = New TextBox()
         TextBox9 = New TextBox()
         TextBox10 = New TextBox()
-        Button2 = New Button()
-        Label12 = New Label()
-        Label13 = New Label()
         SuspendLayout()
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(65, 27)
+        Label1.Font = New Font("HP Simplified", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(74, 36)
         Label1.Name = "Label1"
-        Label1.Size = New Size(429, 29)
+        Label1.Size = New Size(503, 34)
         Label1.TabIndex = 0
         Label1.Text = "Please fill up this form before purchase"
         ' 
@@ -63,9 +60,9 @@ Partial Class backgroundCheck
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Calibri", 10.8F)
-        Label2.Location = New Point(98, 82)
+        Label2.Location = New Point(98, 127)
         Label2.Name = "Label2"
-        Label2.Size = New Size(79, 18)
+        Label2.Size = New Size(94, 22)
         Label2.TabIndex = 1
         Label2.Text = "First Name:"
         ' 
@@ -73,9 +70,9 @@ Partial Class backgroundCheck
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Calibri", 10.8F)
-        Label3.Location = New Point(102, 125)
+        Label3.Location = New Point(98, 187)
         Label3.Name = "Label3"
-        Label3.Size = New Size(76, 18)
+        Label3.Size = New Size(93, 22)
         Label3.TabIndex = 2
         Label3.Text = "Last Name:"
         ' 
@@ -83,9 +80,9 @@ Partial Class backgroundCheck
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Calibri", 10.8F)
-        Label4.Location = New Point(83, 161)
+        Label4.Location = New Point(81, 250)
         Label4.Name = "Label4"
-        Label4.Size = New Size(94, 18)
+        Label4.Size = New Size(110, 22)
         Label4.TabIndex = 3
         Label4.Text = "Middle Initial:"
         ' 
@@ -93,9 +90,9 @@ Partial Class backgroundCheck
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Calibri", 10.8F)
-        Label5.Location = New Point(303, 164)
+        Label5.Location = New Point(346, 250)
         Label5.Name = "Label5"
-        Label5.Size = New Size(110, 18)
+        Label5.Size = New Size(130, 22)
         Label5.TabIndex = 4
         Label5.Text = "Suffix (optional):"
         ' 
@@ -103,9 +100,9 @@ Partial Class backgroundCheck
         ' 
         Label6.AutoSize = True
         Label6.Font = New Font("Calibri", 10.8F)
-        Label6.Location = New Point(130, 239)
+        Label6.Location = New Point(136, 336)
         Label6.Name = "Label6"
-        Label6.Size = New Size(46, 18)
+        Label6.Size = New Size(55, 22)
         Label6.TabIndex = 5
         Label6.Text = "Email:"
         ' 
@@ -113,9 +110,9 @@ Partial Class backgroundCheck
         ' 
         Label7.AutoSize = True
         Label7.Font = New Font("Calibri", 10.8F)
-        Label7.Location = New Point(107, 273)
+        Label7.Location = New Point(105, 379)
         Label7.Name = "Label7"
-        Label7.Size = New Size(69, 18)
+        Label7.Size = New Size(86, 22)
         Label7.TabIndex = 6
         Label7.Text = "Contact #:"
         ' 
@@ -123,9 +120,9 @@ Partial Class backgroundCheck
         ' 
         Label8.AutoSize = True
         Label8.Font = New Font("Calibri", 10.8F)
-        Label8.Location = New Point(44, 347)
+        Label8.Location = New Point(50, 463)
         Label8.Name = "Label8"
-        Label8.Size = New Size(119, 18)
+        Label8.Size = New Size(141, 22)
         Label8.TabIndex = 7
         Label8.Text = "Province and City:"
         ' 
@@ -133,9 +130,9 @@ Partial Class backgroundCheck
         ' 
         Label9.AutoSize = True
         Label9.Font = New Font("Calibri", 10.8F)
-        Label9.Location = New Point(88, 384)
+        Label9.Location = New Point(101, 512)
         Label9.Name = "Label9"
-        Label9.Size = New Size(75, 18)
+        Label9.Size = New Size(91, 22)
         Label9.TabIndex = 8
         Label9.Text = "Baranggay:"
         ' 
@@ -143,9 +140,9 @@ Partial Class backgroundCheck
         ' 
         Label10.AutoSize = True
         Label10.Font = New Font("Calibri", 10.8F)
-        Label10.Location = New Point(303, 384)
+        Label10.Location = New Point(346, 512)
         Label10.Name = "Label10"
-        Label10.Size = New Size(66, 18)
+        Label10.Size = New Size(78, 22)
         Label10.TabIndex = 9
         Label10.Text = "Zip Code:"
         ' 
@@ -153,9 +150,9 @@ Partial Class backgroundCheck
         ' 
         Label11.AutoSize = True
         Label11.Font = New Font("Calibri", 10.8F)
-        Label11.Location = New Point(74, 427)
+        Label11.Location = New Point(85, 569)
         Label11.Name = "Label11"
-        Label11.Size = New Size(91, 18)
+        Label11.Size = New Size(106, 22)
         Label11.TabIndex = 10
         Label11.Text = "Address Line:"
         ' 
@@ -164,139 +161,92 @@ Partial Class backgroundCheck
         Button1.BackColor = Color.LightSlateGray
         Button1.FlatStyle = FlatStyle.Flat
         Button1.ForeColor = SystemColors.HighlightText
-        Button1.Location = New Point(410, 490)
-        Button1.Margin = New Padding(3, 2, 3, 2)
+        Button1.Location = New Point(468, 653)
         Button1.Name = "Button1"
-        Button1.Size = New Size(126, 28)
+        Button1.Size = New Size(144, 37)
         Button1.TabIndex = 11
         Button1.Text = "Save"
         Button1.UseVisualStyleBackColor = False
         ' 
         ' TextBox1
         ' 
-        TextBox1.Location = New Point(183, 80)
-        TextBox1.Margin = New Padding(3, 2, 3, 2)
+        TextBox1.Location = New Point(207, 125)
         TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(312, 23)
+        TextBox1.Size = New Size(356, 27)
         TextBox1.TabIndex = 12
         ' 
         ' TextBox2
         ' 
-        TextBox2.Location = New Point(184, 123)
-        TextBox2.Margin = New Padding(3, 2, 3, 2)
+        TextBox2.Location = New Point(209, 185)
         TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(310, 23)
+        TextBox2.Size = New Size(354, 27)
         TextBox2.TabIndex = 13
         ' 
         ' TextBox3
         ' 
-        TextBox3.Location = New Point(183, 159)
-        TextBox3.Margin = New Padding(3, 2, 3, 2)
+        TextBox3.Location = New Point(209, 245)
         TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(110, 23)
+        TextBox3.Size = New Size(125, 27)
         TextBox3.TabIndex = 14
         ' 
         ' TextBox4
         ' 
-        TextBox4.Location = New Point(422, 162)
-        TextBox4.Margin = New Padding(3, 2, 3, 2)
+        TextBox4.Location = New Point(482, 248)
         TextBox4.Name = "TextBox4"
         TextBox4.PlaceholderText = "eg. Jr, Sr"
-        TextBox4.Size = New Size(71, 23)
+        TextBox4.Size = New Size(81, 27)
         TextBox4.TabIndex = 15
         ' 
         ' TextBox5
         ' 
-        TextBox5.Location = New Point(189, 234)
-        TextBox5.Margin = New Padding(3, 2, 3, 2)
+        TextBox5.Location = New Point(216, 334)
         TextBox5.Name = "TextBox5"
         TextBox5.PlaceholderText = "Please provide a way for us to contact you"
-        TextBox5.Size = New Size(304, 23)
+        TextBox5.Size = New Size(347, 27)
         TextBox5.TabIndex = 16
         ' 
         ' TextBox6
         ' 
-        TextBox6.Location = New Point(189, 271)
-        TextBox6.Margin = New Padding(3, 2, 3, 2)
+        TextBox6.Location = New Point(216, 377)
         TextBox6.Name = "TextBox6"
         TextBox6.PlaceholderText = "09XXXXXXXXX"
-        TextBox6.Size = New Size(304, 23)
+        TextBox6.Size = New Size(347, 27)
         TextBox6.TabIndex = 17
         ' 
         ' TextBox7
         ' 
-        TextBox7.Location = New Point(181, 346)
-        TextBox7.Margin = New Padding(3, 2, 3, 2)
+        TextBox7.Location = New Point(207, 461)
         TextBox7.Name = "TextBox7"
-        TextBox7.Size = New Size(312, 23)
+        TextBox7.Size = New Size(356, 27)
         TextBox7.TabIndex = 18
         ' 
         ' TextBox8
         ' 
-        TextBox8.Location = New Point(181, 382)
-        TextBox8.Margin = New Padding(3, 2, 3, 2)
+        TextBox8.Location = New Point(207, 510)
         TextBox8.Name = "TextBox8"
-        TextBox8.Size = New Size(109, 23)
+        TextBox8.Size = New Size(124, 27)
         TextBox8.TabIndex = 19
         ' 
         ' TextBox9
         ' 
-        TextBox9.Location = New Point(376, 382)
-        TextBox9.Margin = New Padding(3, 2, 3, 2)
+        TextBox9.Location = New Point(430, 510)
         TextBox9.Name = "TextBox9"
-        TextBox9.Size = New Size(117, 23)
+        TextBox9.Size = New Size(133, 27)
         TextBox9.TabIndex = 20
         ' 
         ' TextBox10
         ' 
-        TextBox10.Location = New Point(181, 425)
-        TextBox10.Margin = New Padding(3, 2, 3, 2)
+        TextBox10.Location = New Point(207, 567)
         TextBox10.Name = "TextBox10"
-        TextBox10.Size = New Size(312, 23)
+        TextBox10.Size = New Size(356, 27)
         TextBox10.TabIndex = 21
-        ' 
-        ' Button2
-        ' 
-        Button2.BackColor = Color.LightSlateGray
-        Button2.FlatStyle = FlatStyle.Flat
-        Button2.ForeColor = SystemColors.HighlightText
-        Button2.Location = New Point(71, 490)
-        Button2.Margin = New Padding(3, 2, 3, 2)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(126, 28)
-        Button2.TabIndex = 22
-        Button2.Text = "Clear"
-        Button2.UseVisualStyleBackColor = False
-        ' 
-        ' Label12
-        ' 
-        Label12.AutoSize = True
-        Label12.Font = New Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label12.Location = New Point(83, 202)
-        Label12.Name = "Label12"
-        Label12.Size = New Size(94, 29)
-        Label12.TabIndex = 23
-        Label12.Text = "Contact"
-        ' 
-        ' Label13
-        ' 
-        Label13.AutoSize = True
-        Label13.Font = New Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label13.Location = New Point(71, 307)
-        Label13.Name = "Label13"
-        Label13.Size = New Size(102, 29)
-        Label13.TabIndex = 24
-        Label13.Text = "Address"
         ' 
         ' backgroundCheck
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.OldLace
-        ClientSize = New Size(575, 562)
-        Controls.Add(Label13)
-        Controls.Add(Label12)
-        Controls.Add(Button2)
+        ClientSize = New Size(657, 749)
         Controls.Add(TextBox10)
         Controls.Add(TextBox9)
         Controls.Add(TextBox8)
@@ -319,7 +269,6 @@ Partial Class backgroundCheck
         Controls.Add(Label3)
         Controls.Add(Label2)
         Controls.Add(Label1)
-        Margin = New Padding(3, 2, 3, 2)
         Name = "backgroundCheck"
         Text = "backgroundCheck"
         ResumeLayout(False)
@@ -348,7 +297,4 @@ Partial Class backgroundCheck
     Friend WithEvents TextBox8 As TextBox
     Friend WithEvents TextBox9 As TextBox
     Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label13 As Label
 End Class
